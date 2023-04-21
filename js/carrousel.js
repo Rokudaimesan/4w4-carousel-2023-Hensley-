@@ -57,7 +57,7 @@ function ajouter_un_radio_bouton_dans_carrousel()
   rad.addEventListener('mousedown', function(){
      index = this.dataset.index
      if(ancienIndex!= -1){
-      carrousel__figure.children[ancienIndex].style.opacity = "1"
+      carrousel__figure.children[ancienIndex].style.opacity = "0"
      }
     // console.log(this.dataset.index)
      carrousel__figure.children[index].style.opacity = "1"
@@ -67,6 +67,19 @@ function ajouter_un_radio_bouton_dans_carrousel()
   })
   position = position + 1 // incrémentation de la position 
   carrousel__form.append(rad)
+}
+/**
+ * Affiche la nouvelle image du carrousel 
+ */
+function affiche_image_carrousel(){
+  if(ancienIndex != -1){
+    carrousel__figure.children[ancienIndex].style.opacity = "0"
+    //carrousel__figure.children[ancienIndex].classList.remove('carrousel__img--activer')
+  }
+  //console.log(this.dataset.index)
+  carrousel__figure.children[index].style.opacity = "1"
+  //carrousel__figure.children[index].classList.add('carrousel__img--activer')
+  ancienIndex = index
 }
 
 })()
