@@ -1,5 +1,5 @@
 .carrousel {
-  position: fixed;
+  position: absolute;
   width: 50%;
   height: 50%;
   top: 25%;
@@ -33,5 +33,18 @@
   position: absolute;
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
+  opacity: 0;
+}
+.carrousel__figure .carrousel__form {
+  display: block;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid #fff;
+  width: 100%;
+}
+.carrousel__figure .carrousel__rad {
+  display: inline-block;
+  margin: 4px;
 }/*# sourceMappingURL=style.css.map */
