@@ -56,12 +56,7 @@ function ajouter_un_radio_bouton_dans_carrousel()
   rad.dataset.index = position
   rad.addEventListener('mousedown', function(){
      index = this.dataset.index
-     if(ancienIndex!= -1){
-      carrousel__figure.children[ancienIndex].style.opacity = "0"
-     }
-    // console.log(this.dataset.index)
-     carrousel__figure.children[index].style.opacity = "1"
-     ancienIndex = index
+     affiche_image_carrousel()
 
 
   })
