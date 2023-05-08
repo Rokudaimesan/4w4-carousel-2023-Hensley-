@@ -35,7 +35,7 @@
         position: absolute;
         object-fit: cover;
         width: 100%;
-        height: auto;
+        height: 100%;
         opacity: 0;
         
 
@@ -54,7 +54,23 @@
     .carrousel__rad {
         display: inline-block;
         margin: 4px;
-        z-index: 10px;
         
+        
+    }
+
+    .carrousel__back, .carrousel__next {
+        position : absolute;
+        width : 30px;
+        height : 30px;
+        top : 50%;
+        border : 1px solid #666;
+        border-radius : 3px;
+    
+    }
+    .carrousel__back{
+      left : 5px;
+    }
+    .carrousel__next{
+      right : 5px;
     }
 }
